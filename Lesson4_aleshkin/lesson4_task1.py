@@ -5,7 +5,7 @@
 from sys import argv
 
 script_name, workhours, pph, profit = argv
-#Options: 8 200 100
+#Parameters: 8 200 100
 
 def sallary():
     #workhours = int(input('Выработка в часах: '))
