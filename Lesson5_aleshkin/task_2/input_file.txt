@@ -1,0 +1,5 @@
+line one
+line two with word
+line three with more words
+another line with a few words
+end of file
