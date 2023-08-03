@@ -9,18 +9,18 @@ Four — 4
 Новый блок строк должен записываться в новый текстовый файл.
 """
 
-#.....перевод.....
-with open("numbers.txt", 'r', encoding='utf-8') as f_obj:
-    for el_line in f_obj:
-        words = el_line.split()
-        """
-        if words == 'One':
-            words == 'Один'
-        elif words == 'Two':
-            words == 'Два'
-        elif words == 'Three':
-            words == 'Три'
-        elif words == 'Four':
-            words == 'Четыре'
-        """
-        print(el_line)
+numbers = {'One': 'Один', 'Two': 'Два', 'Three': 'Три', 'Four': 'Четыре'}
+
+with open('numbers.txt', 'r', encoding='utf-8') as origfile:
+    my_lines = origfile.readlines()
+
+new_lines = []
+for line in my_lines:
+    word, file_number = line.strip().split(' — ')
+    rus_number = numbers[word]
+    # [word] -> [rus_number] + ' - ' + [file_number]
+    new_line = f'{rus_number} — {file_number}\n'
+    new_lines.append(new_line)
+
+with open('new_numbers.txt', 'w', encoding='utf-8') as file:
+    file.writelines(new_lines)
