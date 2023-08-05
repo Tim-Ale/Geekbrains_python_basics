@@ -10,14 +10,6 @@
 
 
 class Road:
-    # length 5000m
-    __length = None
-    # width 20m
-    __width = None
-    # weight 25kg
-    weight = None
-    # thickness 5cm = 0.05m
-    thickness = None
 
     def __init__(self, length, width):
         self.length = length

@@ -58,8 +58,6 @@ class SportCar(Car):
 
 
 class WorkCar(Car):
-    def __init__(self, speed, color, name, is_police):
-        super().__init__(speed, color, name, is_police)
 
     def show_speed(self):
         # print(f'Скорость {self.name}: {self.speed}')
